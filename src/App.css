@@ -1,0 +1,161 @@
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.container > h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Input section */
+.todoInput {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.todoInput input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+  outline: none;
+}
+
+.todoInput input:focus {
+  border-color: #007bff;
+}
+
+/* Common button */
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 7px;
+  background-color: #007bff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo card */
+.todo-card {
+  width: 100%;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Checkbox + content */
+.wrapper-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.checkboxInput {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+/* Todo title + buttons */
+.todo-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 15px;
+  min-width: 0;
+}
+
+.todo-card-content h1 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.todo-card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.todo-card-buttons button {
+  padding: 9px 16px;
+}
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+  .container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .todo-card-content {
+    flex-wrap: wrap;
+  }
+
+  .todo-card-buttons {
+    width: 100%;
+  }
+
+  .todo-card-buttons button {
+    flex: 1;
+  }
+}
